@@ -1,0 +1,18 @@
+server:
+  port: 8056
+spring:
+  application:
+    name: oauth-center
+  jackson:
+    time-zone: GMT+8
+  datasource:
+    name: test
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mysql?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&useSSL=true
+    username: root
+    password: 110119120wk
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.105:9080/eureka/,http://192.168.1.112:9080/eureka/
+

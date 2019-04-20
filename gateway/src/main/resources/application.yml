@@ -1,0 +1,22 @@
+server:
+  port: 8050
+  servlet:
+    context-path: /zuul
+spring:
+  application:
+    name: gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.105:9080/eureka/,http://192.168.1.112:9080/eureka/
+zuul:
+  routes:
+    uaa:
+      path: /uaa/**
+      serviceId: oauth-center
+    client1:
+      path: /client1/**
+      serviceId: client1
+    client2:
+      path: /client2/**
+      serviceId: client2
